@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct savings{
+struct _retire_info{
   int months;
   double contribution;
   double rate_of_return;
 };
-typedef struct savings retire_info;
+typedef struct _retire_info retire_info;
 
 void retirement (int startAge, double initial, retire_info working, retire_info retired){
   /*startAge: in months, initial: initial saving in dollars, working: info about working, retired: info about being retired*/
