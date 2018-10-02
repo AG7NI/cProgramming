@@ -1,7 +1,8 @@
-Grading at Tue Oct  2 23:07:17 UTC 2018
+Grading at Tue Oct  2 23:11:03 UTC 2018
 Attempting to compile test.c
-The code did not compile
+gcc -o test -pedantic -std=gnu99 -Wall -Werror test.c
+compiled
 Your file matched the expected output
 Your output matched what we expected
 
-Overall Grade: FAILED
+Overall Grade: PASSED
