@@ -10,6 +10,7 @@ int * arrayMax(int * array, int n) {
   for ( int i = 1; i < n; i++){
     if (array[i] > max){
       pMax = &array[i];
+      max = array[i];
     }
   }
   return pMax;
