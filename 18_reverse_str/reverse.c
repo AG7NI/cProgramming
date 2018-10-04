@@ -3,7 +3,21 @@
 #include <string.h>
 
 void reverse(char * str) {
-  //WRITE ME!
+  char *end;
+  end = strchr(str,'\0');
+  if (str != end){
+    unsigned len = strlen(str);
+    char temp[len+1];
+    strcpy(temp, str);
+    char *p;
+    p = end;
+    int i = 0;
+    while ( p != str){
+      p--;
+      *p = temp[i];
+      i++;
+    }
+  }   
 }
 
 int main(void) {
