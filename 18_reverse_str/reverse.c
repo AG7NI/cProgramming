@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
 
 void reverse(char * str) {
+  assert( str == NULL);
   char *end;
   end = strchr(str,'\0');
   if (str != end){
