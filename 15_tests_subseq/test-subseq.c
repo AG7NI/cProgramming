@@ -30,6 +30,5 @@ int main(void){
   if (e_size != 0){
     return EXIT_FAILURE;
   }
-  
   return EXIT_SUCCESS; 
 }
