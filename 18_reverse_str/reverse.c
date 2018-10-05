@@ -4,22 +4,23 @@
 #include <assert.h>
 
 void reverse(char * str) {
-  assert( str == NULL);
-  char *end;
-  end = strchr(str,'\0');
-  if (str != end){
-    unsigned len = strlen(str);
-    char temp[len+1];
-    strcpy(temp, str);
-    char *p;
-    p = end;
-    int i = 0;
-    while ( p != str){
-      p--;
-      *p = temp[i];
-      i++;
+  if ( str != NULL){
+    char *end;
+    end = strchr(str,'\0');
+    if (str != end){
+      unsigned len = strlen(str);
+      char temp[len+1];
+      strcpy(temp, str);
+      char *p;
+      p = end;
+      int i = 0;
+      while ( p != str){
+	p--;
+	*p = temp[i];
+	i++;
+      }
     }
-  }   
+  }
 }
 
 int main(void) {
