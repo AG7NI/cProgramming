@@ -1,0 +1,7 @@
+-*- mode: compilation; default-directory: "~/learn2prog/23_power_rec/" -*-
+Compilation started at Mon Oct  8 16:10:03
+
+make -k 
+gcc -o power -Wall -Werror -pedantic -std=gnu99 power.c test-power.c
+
+Compilation finished at Mon Oct  8 16:10:03
