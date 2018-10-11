@@ -1,15 +1,15 @@
-Grading at Thu Oct 11 20:06:43 UTC 2018
+Grading at Thu Oct 11 20:42:41 UTC 2018
 Attempting to compile breaker.c 
 gcc -o breaker -Wall -Werror -pedantic -std=gnu99 break_encr.c
 testcase1 passed
 #################################################
 testcase2:
-testcase2 failed
+testcase2 passed
 #################################################
 testcase3:
-testcase3 failed
+testcase3 passed
 #################################################
 testcase4:
-testcase4 failed
+testcase4 passed
 
-Overall Grade: F
+Overall Grade: A
