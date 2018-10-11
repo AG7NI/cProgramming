@@ -38,6 +38,11 @@ int main (int argc, char **argv){
     perror("The txt file does not contain letters");
     return EXIT_FAILURE;
   }
+  //printf("max=%d\n",e_pos);
+  e_pos -= 4;
+  if (e_pos < 0){
+    e_pos += 26;
+  }
   printf("%d\n", e_pos);
   if (fclose(f) != 0) {    
     perror("Failed to close the input file!");    
