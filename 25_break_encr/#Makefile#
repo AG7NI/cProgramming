@@ -1,0 +1,2 @@
+break_encr: break_encr.c
+	gcc -o break_encr -Wall -Werror -pedantic -std-gnu99 break_encr.c
