@@ -35,9 +35,9 @@ int main(int argc, char ** argv){
   int count = 0;
   char matrix[10][10];
   char *p = &matrix[0][0];
-  char line[12];
+  char line[20];
   int size;
-  while (fgets(line, 12, f)!= NULL){
+  while (fgets(line, 20, f)!= NULL){
     size=strlen(line);
     //printf("size of the line=%d\n", size);
     if (size != 11){
@@ -45,7 +45,7 @@ int main(int argc, char ** argv){
       fclose(f);
       return EXIT_FAILURE;
     }
-    if (line[10] == '\n'){
+    else if (line[10] == '\n'){
       for (int i = 0; i<10; i++){
       *p = line[i];
       // printf ("%c",*p);
