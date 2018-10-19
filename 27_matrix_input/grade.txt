@@ -1,4 +1,4 @@
-Grading at Fri Oct 19 03:28:11 UTC 2018
+Grading at Fri Oct 19 03:39:18 UTC 2018
 Attempting to compile rotateMatrix.c
 testcase1 failed, your program didn't indicate this is a failure case
 #################################################
@@ -8,7 +8,7 @@ testcase2 passed
 #################################################
 testcase3: blank.txt
  (should indicate an error)
-valgrind reported memory errors
+testcase3 failed, your program didn't indicate this is a failure case
 #################################################
 testcase4: short-line.txt
  (should indicate an error)
@@ -16,7 +16,7 @@ testcase4 failed, your program didn't indicate this is a failure case
 #################################################
 testcase5: short-file.txt
  (should indicate an error)
-valgrind reported memory errors
+testcase5 failed, your program didn't indicate this is a failure case
 #################################################
 testcase6: long-line.txt
  (should indicate an error)
@@ -24,7 +24,7 @@ testcase6 failed, your program didn't indicate this is a failure case
 #################################################
 testcase7: long-file.txt
  (should indicate an error)
-testcase7 failed, your program didn't indicate this is a failure case
+valgrind reported memory errors
 #################################################
 testcase8: long-line-2.txt
  (should indicate an error)
