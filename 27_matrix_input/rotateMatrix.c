@@ -25,11 +25,12 @@ void rotate (char matrix[10][10]){
 
 int main(int argc, char ** argv){
   if (argc != 2){
+    fprintf(stderr,"Usage: No File Name\n");
     return EXIT_FAILURE;
   }
   FILE *f=fopen(argv[1],"r");
   if (f == NULL){
-    perror("Could not open file");
+    perror("Could not open file\n");
     return EXIT_FAILURE;
   }
   int count = 0;
@@ -41,6 +42,7 @@ int main(int argc, char ** argv){
     char *l = fgets(line, 20, f);
     if (l == NULL && count < 100){
       fclose(f);
+      printf("not enough element\n");
       return EXIT_FAILURE;
     }
     if (l == NULL && count ==100){
@@ -49,7 +51,7 @@ int main(int argc, char ** argv){
     size=strlen(line);
     //printf("size of the line=%d\n", size);
     if (size != 11){
-      printf("Too many elements");
+      printf("Too many elements\n");
       fclose(f);
       return EXIT_FAILURE;
     }
@@ -63,12 +65,12 @@ int main(int argc, char ** argv){
       //printf("%c", line[10]);
     }
     else if (line[10] != '\n'){
-      printf("Too much elements");
+      printf("Too much elements\n");
       fclose(f);
       return EXIT_FAILURE;
     }
     else if (count > 100){
-      printf("Too much elements");
+      printf("Too much elements\n");
       fclose(f);
       return EXIT_FAILURE;
     }
