@@ -1,6 +1,6 @@
-Grading at Fri Oct 19 03:39:18 UTC 2018
+Grading at Fri Oct 19 04:00:45 UTC 2018
 Attempting to compile rotateMatrix.c
-testcase1 failed, your program didn't indicate this is a failure case
+testcase1 passed
 #################################################
 testcase2: NonExistentFile
  (should indicate an error)
@@ -32,7 +32,7 @@ testcase8 failed, your program didn't indicate this is a failure case
 #################################################
 testcase9: normal1.txt normal2.txt
  (should indicate an error)
-testcase9 failed, your program didn't indicate this is a failure case
+testcase9 passed
 #################################################
 testcase10: normal1.txt
 Your file matched the expected output
