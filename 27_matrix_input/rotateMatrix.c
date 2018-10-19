@@ -37,7 +37,15 @@ int main(int argc, char ** argv){
   char *p = &matrix[0][0];
   char line[20];
   int size;
-  while (fgets(line, 20, f)!= NULL){
+  while (1){
+    char *l = fgets(line, 20, f);
+    if (l == NULL && count < 100){
+      fclose(f);
+      return EXIT_FAILURE;
+    }
+    if (l == NULL && count ==100){
+      break;
+    }
     size=strlen(line);
     //printf("size of the line=%d\n", size);
     if (size != 11){
