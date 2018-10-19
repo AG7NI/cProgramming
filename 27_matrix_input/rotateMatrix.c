@@ -32,20 +32,22 @@ int main(int argc, char ** argv){
     perror("Could not open file\n");
     return EXIT_FAILURE;
   }
-  char line[12];
+  char line[100];
   int n_row = 0;
   char matrix[10][10];
   char *p_matrix=&matrix[0][0];
   while(1){
-    char *l = fgets(line, 12, f);
+    char *l = fgets(line, 100, f);
     if (l == NULL && n_row == 10){
       break;
     }
     if (l == NULL && n_row < 10){
-	perror("Less row than expected\n");
+	printf("Less row than expected\n");
 	fclose(f);
 	return EXIT_FAILURE;
     }
+    //size_t line_size=strlen(l);
+    //printf("the size of line=%lu", line_size);
     char *l_end;
     char *p_line = &line[0];
     l_end = strchr(line, '\n');
@@ -58,12 +60,12 @@ int main(int argc, char ** argv){
       n++;
     }
     if (n != 10){
-      printf("Wrong number of elements in a row");
+      printf("Wrong number of elements in a row\n");
       fclose(f);
       return EXIT_FAILURE;
     }
     if (n_row == 10){
-      printf("Too many rows");
+      printf("Too many rows\n");
       fclose(f);
       return EXIT_FAILURE;
     }
