@@ -29,7 +29,7 @@ int main(int argc, char ** argv){
   }
   FILE *f=fopen(argv[1],"r");
   if (f == NULL){
-    perror("Could not open file\n");
+    fprintf(stderr,"Could not open file\n");
     return EXIT_FAILURE;
   }
   char line[100];
@@ -42,9 +42,9 @@ int main(int argc, char ** argv){
       break;
     }
     if (l == NULL && n_row < 10){
-	printf("Less row than expected\n");
-	fclose(f);
-	return EXIT_FAILURE;
+      fprintf(stderr,"Less row than expected\n");
+      fclose(f);
+      return EXIT_FAILURE;
     }
     //size_t line_size=strlen(l);
     //printf("the size of line=%lu", line_size);
@@ -60,12 +60,12 @@ int main(int argc, char ** argv){
       n++;
     }
     if (n != 10){
-      printf("Wrong number of elements in a row\n");
+      fprintf(stderr,"Wrong number of elements in a row\n");
       fclose(f);
       return EXIT_FAILURE;
     }
     if (n_row == 10){
-      printf("Too many rows\n");
+      fprintf(stderr,"Too many rows\n");
       fclose(f);
       return EXIT_FAILURE;
     }
