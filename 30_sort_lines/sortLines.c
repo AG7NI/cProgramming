@@ -40,8 +40,12 @@ int main(int argc, char ** argv) {
     int nFiles = argc - 1;
     for (int k = 0; k < nFiles; k++){
       FILE *f = fopen(argv[k+1], "r");
-      if (f== NULL){
+      if (f == NULL){
 	perror("Could not open file");
+	for (size_t j=0; j<i; j++){
+	  free(lines[j]);
+	}
+	free(lines);
 	return EXIT_FAILURE;
       }
       curr = NULL;
