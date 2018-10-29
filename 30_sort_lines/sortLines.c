@@ -42,10 +42,6 @@ int main(int argc, char ** argv) {
       FILE *f = fopen(argv[k+1], "r");
       if (f == NULL){
 	perror("Could not open file");
-	for (size_t j=0; j<i; j++){
-	  free(lines[j]);
-	}
-	free(lines);
 	return EXIT_FAILURE;
       }
       i = 0;
