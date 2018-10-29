@@ -48,6 +48,8 @@ int main(int argc, char ** argv) {
 	free(lines);
 	return EXIT_FAILURE;
       }
+      i = 0;
+      lines = NULL;
       curr = NULL;
       while (getline(&curr, &sz, f) >= 0){
 	lines = realloc(lines, (i+1)*sizeof(*lines));
@@ -56,17 +58,17 @@ int main(int argc, char ** argv) {
 	i++;
       }
       free(curr);
+      sortData(lines, i);
+      for (size_t j = 0; j < i; j++){
+	printf("%s", lines[j]);
+	free(lines[j]);
+      }
+      free(lines);
       if (fclose(f)!=0){
 	perror ("Failed to close the input file!");
 	return EXIT_FAILURE;
       }
     }
-    sortData(lines, i);
-    for (size_t j = 0; j < i; j++){
-      printf("%s", lines[j]);
-      free(lines[j]);
-    }
-    free(lines);
   }
   return EXIT_SUCCESS;
 }
